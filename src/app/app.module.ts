@@ -14,6 +14,10 @@ import { CustomerRegistrationComponent } from './customer/customer-registration/
 import { CustomerHomeComponent } from './customer/customer-home/customer-home/customer-home.component';
 import { ListbooksComponent } from './listbooks/listbooks.component';
 import { CartComponent } from './cart/cart.component';
+import { PlaceOrderComponent } from './customer/place-order/place-order.component';
+import { DebitCardComponent } from './debit-card/debit-card.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/compiler';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { CartComponent } from './cart/cart.component';
     CustomerRegistrationComponent,
     CustomerHomeComponent,
     ListbooksComponent,
-    CartComponent
+    CartComponent,
+    PlaceOrderComponent,
+    DebitCardComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +49,7 @@ import { CartComponent } from './cart/cart.component';
     //   {path:"",redirectTo:"home",pathMatch:"full"}
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

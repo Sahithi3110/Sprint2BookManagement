@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, inital-width=1.0" >
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -43,17 +44,11 @@
   <a (click)="open(content)">Sign In</a></li>
     <!-- <a [routerLink]="['/login']">Sign In</a></li> -->
   <li><a  [routerLink]="['/register']">Sign Up</a></li>
-  <li><a [routerLink]="['/login']"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    <div class="cart_value">2</div></a></li>
+  <li><a [routerLink]="['/cart']"><i class="fa" style="font-size:24px">&#xf07a;</i>
+    <span class='badge badge-warning' id='lblCartCount'></span>
+    </a></li>
 </ul>
-<div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-      <div class="searchbar">
-        <input class="search_input" type="text" name="" placeholder="Search by Author,Title or ISBN..">
-        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-      </div>
-    </div>
-  </div>
+
     
 </body>
 </html>

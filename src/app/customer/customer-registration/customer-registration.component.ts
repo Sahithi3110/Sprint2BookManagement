@@ -14,6 +14,7 @@ export class CustomerRegistrationComponent implements OnInit {
 
   register : Register=new Register("","","","");
   message:any;
+  
 
   ngOnInit(): void {
   }

@@ -1,3 +1,4 @@
+<input type="text" [(ngModel)]="title" (input)="search()" placeholder="Search">
 <table class="table">
     <thead class="table-dark">
         <tr>
@@ -26,7 +27,7 @@
                     <td>{{b.publishDate}}</td>
                     <td>{{b.lastUpdatedOn}}</td> 
                     <td>{{b.category.categoryName}}</td>
-                    <td> <button type="button" [routerLink]="['/cart']" 
+                    <td> <button type="button" 
                          (click)="addToCart(b)"   class="btn btn-primary btn-sm">
                         Add to cart</button></td>
 

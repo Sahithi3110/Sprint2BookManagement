@@ -18,12 +18,17 @@ export class ListbooksComponent implements OnInit {
   cart:Cart=new Cart(1,"",2,1);
   message:any;
   bookId:any;
+  title="";
+  author='';
   ngOnInit(): void {
+    var val = Math.floor(1000 + Math.random() * 9000);
+    console.log(val);
     this.getBooks();
     
   }
   public addToCart(data: Book){
     this.bookService.addToCart(data).subscribe(()=>{this.message="Item added";});
+    alert(data.title+" added to cart");
    }
 
   public getBooks() {
@@ -35,6 +40,16 @@ export class ListbooksComponent implements OnInit {
         })
       
     });
+  }
+  public search(){
+    if(this.title!="")
+    {
+    this.books=this.books?.filter(res=>{
+      return res.title?.toLocaleLowerCase().match(this.title?.toLowerCase())
+    })
+    }else if(this.title==""){
+      this.ngOnInit();
+    }
   }
   
 }

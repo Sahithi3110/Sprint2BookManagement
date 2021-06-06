@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { LoginComponent } from '../login/login.component';
 // import { RegistrationComponent } from '../registration/registration.component';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { BookService } from 'src/app/services/book.service';
 
 
 @Component({
@@ -11,12 +12,10 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class HomeComponent implements OnInit {
-
-  
-
-  
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+   
 
 }
 
