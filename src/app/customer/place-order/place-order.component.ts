@@ -8,7 +8,7 @@ export var orderId=Math.floor(1000 + Math.random() * 9000);
   templateUrl: './place-order.component.html',
   styleUrls: ['./place-order.component.css']
 })
-export class PlaceOrderComponent implements OnInit,OnChanges {
+export class PlaceOrderComponent implements OnInit {
   constructor(private bookService:BookService) { }
   ngOnChanges(): void {
     this.isValid=!this.isValid;
@@ -27,7 +27,7 @@ export class PlaceOrderComponent implements OnInit,OnChanges {
     this.bookOrder.status="success";
     this.bookService.bookOrderDetails(this.bookOrder).subscribe((data:any)=>{this.bookOrder=data;});
     if(this.bookOrder.paymentMethod==="CashOnDelivery")
-    this.isValid=!this.isValid;      
+    this.isValid=true;      
   }
   
 

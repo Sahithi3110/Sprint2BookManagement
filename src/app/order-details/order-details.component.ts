@@ -13,6 +13,7 @@ export class OrderDetailsComponent implements OnInit {
   //bookOrder:Bookorder[]| undefined;
   bookOrder:Bookorder=new Bookorder(0,0,new Date(2021, 1, 1),0,"","","","","");
   ngOnInit(): void {
+    console.log(orderId);
     this.getOrderDetails();
   }
 

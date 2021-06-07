@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+
 import { Component, Inject, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Cart } from '../classes/cart';
 import { BookService } from '../services/book.service';
@@ -15,6 +15,9 @@ export class CartComponent implements OnInit{
   cart1:Cart[] =[];
   
   sum=0;
+  ;
+  
+  // sum=0;
   ngOnInit(): void {   
     this.showCart();
   }
@@ -44,8 +47,8 @@ export class CartComponent implements OnInit{
         this.sum=(data.price*data.quantity)+this.sum;
   });
     });
-    return this.sum;
-  
+        return this.sum;
+    
    
    }
    
